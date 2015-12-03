@@ -1,2 +1,2 @@
-# tipbot
-a Slack bitcoin tip bot
+# Slack Bitcoin Tip Bot
+Enable bitcoin tipping in your slack channel.
