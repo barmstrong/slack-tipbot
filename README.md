@@ -109,6 +109,10 @@ You can use any custom images you'd like linked to those names, and they will wo
 
 Use the `heroku logs -t` command to see what is going on, any error messages, etc. [Open an issue](https://github.com/barmstrong/slack-tipbot/issues/new) if you encounter problems.
 
+## Heroku Idling
+
+Heroku free tier applications will idle when not in use. Either pay $7 a month for the hobby dyno or use [UptimeRobot](http://uptimerobot.com/), [Pingdom](https://www.pingdom.com/), or similar to prevent your instance from sleeping.
+
 ## Contributing
 
 Pull requests are welcome. I'm curious what improvements/modifications people can make. What else should it support? With Slack's popularity, this has the potential to introduce thousands (millions?) of new people to bitcoin, given the ease of getting started. It takes just one person to add it to a team.
