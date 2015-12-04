@@ -250,7 +250,11 @@ private
 
       # put 100 bits in the account for free
       unless user_id == tipbot_user_id
-        txn = @coinbase.primary_account.transfer(to: account_id, amount: "0.0001", currency: "BTC")
+        begin
+          txn = @coinbase.primary_account.transfer(to: account_id, amount: "0.0001", currency: "BTC")
+        rescue Coinbase::Wallet::NotFoundError => e
+          puts "Unable to fund new wallet! You may want to add more funds so every new user gets 100 bits for free."
+        end
       end
     end
 

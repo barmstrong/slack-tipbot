@@ -79,7 +79,7 @@ Deploy your app!
 
 Developers: If you have the app cloned locally for development you can add the heroku repository with `git remote add heroku git@heroku.com:YOURREPONAME.git`. Or clone a fresh copy with `git clone git@heroku.com:YOURREPONAME.git`.
 
-Troubleshooting: Sometimes heroku seems to fail to connect to redis on the first try.
+Troubleshooting: See what is going on with `heroku logs -t` etc.
 
 ## Troubleshooting
 Set up in your slack instance using the 'Add to slack' button [here/link].
