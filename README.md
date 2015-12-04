@@ -35,23 +35,51 @@ It takes 5-10 minutes to get a hosted copy of slack-tipbot up and running. Think
 
 ### 1. Create the bot
 
-<a href="Add a new bot in slack" target="_blank">Add a new bot in slack</a>.
+<a href="Add a new bot in slack" target='_blank'>Add a new bot in slack</a>.
 
 Give it a name, such as "tipbot". Then choose an emoji for it such as :money_mouth_face:.
 
 Click "Save Integration". Leave this window open. You'll be needing that API token in a moment.
 
-<img src="https://photos-3.dropbox.com/t/2/AACh0iWbxBPSSK_mwH3vDxIV2EBVG6F32fQI8OnzhpW_TQ/12/324237/png/32x32/3/1449273600/0/2/Screenshot%202015-12-04%2011.12.02.png/EK6YORjDv5K0AyACKAI/oi00v4CrYuijCa_D0GunX-qat8pD78BNgNjIvFuBq1c?size_mode=3&size=1600x1200" width="750">
+<img src="https://raw.githubusercontent.com/barmstrong/slack-tipbot/master/images/screen1.png" width="750">
 
-### 2. Deploy the app
+### 2. Create a Coinbase account
+
+Slack-Tipbot keeps track of each user's balance in a separate wallet on Coinbase. This allows you to make transfers between accounts off-blockchain with zero fees.
+
+If you already have a Coinbase account it is recommended to make a new one, since this app will create a lot of new wallets (one per user)!
+
+[Create A Coinbase Account](https://www.coinbase.com/signup)
+
+<img src="https://raw.githubusercontent.com/barmstrong/slack-tipbot/master/images/screen2.png" width="750">
+
+Verify your email and skip the quick start.
+
+[Create a Coinbase API Key](https://www.coinbase.com/settings/api) by clicking "New API Key" (you don't need OAuth2).
+
+<img src="https://raw.githubusercontent.com/barmstrong/slack-tipbot/master/images/screen2.png" width="500" style="float: right;">
+
+Under accounts check the box for "All", and under permissions check the box for `wallet:accounts:create`, `wallet:accounts:read`, `wallet:addresses:create`, `wallet:transactions:transfer`, and `wallet:transactions:send`.
+
+Leave the rest of the settings blank and click "Create". You'll then need to "Enable" the key and click to reveal your key and secret. You'll need these in a moment.
+
+### 3. Deploy the app
 
 Tipbot run on the free tier of Heroku. The easiest way to deploy it is with the Heroku deploy button.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
+Add an app name if you'd like (optional).
 
+Then fill in the config variables that you generated in step 1 (SLACK_API_TOKEN) and step 2 (COINBASE_API_KEY and COINBASE_API_SECRET).
 
-## Usage
+Deploy your app!
+
+Developers: If you have the app cloned locally for development you can add the heroku repository with `git remote add heroku git@heroku.com:YOURREPONAME.git`. Or clone a fresh copy with `git clone git@heroku.com:YOURREPONAME.git`.
+
+Troubleshooting: Sometimes heroku seems to fail to connect to redis on the first try.
+
+## Troubleshooting
 Set up in your slack instance using the 'Add to slack' button [here/link].
 
 - Send 10 bits: /tip @john 10

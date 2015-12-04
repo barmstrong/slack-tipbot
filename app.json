@@ -10,6 +10,6 @@
     "COINBASE_API_SECRET": {}
   },
   "addons": [
-    "heroku-redis:hobby-dev"
+    "redistogo:nano"
   ]
 }
