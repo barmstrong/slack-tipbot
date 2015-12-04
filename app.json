@@ -1,0 +1,9 @@
+/* Heroku file to create the deploy button */
+
+{
+  "name": "Slack Tipbot",
+  "description": "Reward teammates in slack with bitcoin!",
+  "repository": "https://github.com/heroku/node-js-sample",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": ["node", "express", "static"]
+}
