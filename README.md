@@ -31,21 +31,21 @@ You can also tip people with reactions to their messages. Try 1bit <img src="htt
 
 ## Installation
 
-It takes 5-10 minutes to get a hosted copy of slack-tipbot up and running. Think you're up for it? Start your timers meow! :smiley_cat:
+It takes 5-10 minutes to get a hosted copy of slack-tipbot up and running. Do you trust me? Ok, let's get started...:smiley_cat:
 
-### 1. Create the bot
+### 1. Create the slack bot
 
-<a href="Add a new bot in slack" target='_blank'>Add a new bot in slack</a>.
+<a href="Add a new bot in slack" target='_blank'>Add a new bot in slack</a> for your team.
 
 Give it a name, such as "tipbot". Then choose an emoji for it such as :money_mouth_face:.
 
-Click "Save Integration". Leave this window open. You'll be needing that API token in a moment.
-
 <img src="https://raw.githubusercontent.com/barmstrong/slack-tipbot/master/images/screen1.png" width="750">
+
+Click "Save Integration". Leave this window open. You'll be needing that API token in a moment.
 
 ### 2. Create a Coinbase account
 
-Slack-Tipbot keeps track of each user's balance in a separate wallet on Coinbase. This allows you to make transfers between accounts off-blockchain with zero fees.
+Slack-Tipbot keeps track of each user's balance in a separate wallet on Coinbase. This allows you to make transfers between accounts off-blockchain with zero fees. You can withdraw the bitcoin to any address once you have a sizable amount (at least a couple hundred bits) with an on blockchain transaction.
 
 If you already have a Coinbase account it is recommended to make a new one, since this app will create a lot of new wallets (one per user)!
 
@@ -55,15 +55,17 @@ If you already have a Coinbase account it is recommended to make a new one, sinc
 
 Verify your email and skip the quick start.
 
-[Create a Coinbase API Key](https://www.coinbase.com/settings/api) by clicking "New API Key" (you don't need OAuth2).
+[Create a Coinbase API Key](https://www.coinbase.com/settings/api) by clicking "New API Key".
 
 <img src="https://raw.githubusercontent.com/barmstrong/slack-tipbot/master/images/screen3.png" width="450" style="float: right;">
 
-Under accounts check the box for "All", and under permissions check the box for `wallet:accounts:create`, `wallet:accounts:read`, `wallet:addresses:create`, `wallet:transactions:transfer`, and `wallet:transactions:send`.
+Under accounts check the box for `all`, and under permissions check the box for `wallet:accounts:create`, `wallet:accounts:read`, `wallet:addresses:create`, `wallet:transactions:transfer`, and `wallet:transactions:send`.
 
-Leave the rest of the settings blank and click "Create". You'll then need to "Enable" the key and click to reveal your key and secret. You'll need these in a moment.
+Leave the rest of the settings blank and click "Create". You'll then need to "Enable" the key and click it to reveal the full key and secret. We'll use these in a moment.
 
-Finally, it's a good idea to *fund the primary Coinbase wallet* with $5-10 of bitcoin. By default every new user in slack (when they first interact with tipbot) will get 100 bits in their account. This greatly increases adoption/usage of tipbot since there is nothing people need to set up to start tipping.
+Finally, it's a good idea to *fund your Coinbase account* with at least a few dollars of bitcoin. By default every new user in slack (when they first interact with tipbot) will get 100 bits in their account. This greatly increases adoption/usage of tipbot since there is nothing people need to set up to start tipping.
+
+If you have an existing Coinbase account, you can send some bitcoin to this new account via email or bitcoin address.
 
 ### 3. Deploy the app
 
@@ -75,24 +77,22 @@ Add an app name if you'd like (optional).
 
 Then fill in the config variables that you generated in step 1 (SLACK_API_TOKEN) and step 2 (COINBASE_API_KEY and COINBASE_API_SECRET).
 
-Deploy your app!
-
 <img src="https://raw.githubusercontent.com/barmstrong/slack-tipbot/master/images/screen4.png" width="450">
 
-Developers: If you have the app cloned locally for development you can now add the heroku repository with `git remote add heroku git@heroku.com:YOURREPONAME.git`. Or clone a fresh copy with `git clone git@heroku.com:YOURREPONAME.git`.
-
-Troubleshooting: See what is going on with `heroku logs -t` etc.
+Finally, click "Deploy for Free"!
 
 ### 4. You're done!
 
-Try chatting with `@tipbot` in private chat, or `/invite @tipbot` to any channel or group that you'd like. Use `@tipbot help` for a list of commands.
+The `@tipbot` user should now appear in your company Slack.
+
+Try chatting with `@tipbot` in private chat, or `/invite @tipbot` to any channel or group. Use `@tipbot help` for a list of commands or try using the `tip @user 10` syntax.
 
 ## History
-This tipping bot was created during the Coinbase hackathon in early December 2015.
+SlackTipbot was created during the Coinbase hackathon in early December 2015. If you're interested in learning more about working in the bitcoin industry [send us a note](https://www.coinbase.com/careers).
 
 ## Contributing
 
-Please do :) Fork, PR, all the standard stuff appreciated.
+Please do :) Fork, PR, all the standard stuff appreciated. Could use some tests and lots of cool new features.
 
 ## Thanks
 
