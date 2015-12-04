@@ -1,9 +1,14 @@
-# Slack Bitcoin Tip Bot
+# Slack Tipbot
 
-Enable bitcoin tipping in slack. Slack users can send bitcoin to each other in slack channels.
+Reward teammates in slack using bitcoin! This bot enables bitcoin rewards to members of your team in real time. You can even use reactions/emoji!
+
+[animated gif here]
 
 ## Installation
-TODO: Describe the installation process
+
+Installation takes about 10 minutes.
+
+### 1.
 
 ## Usage
 Set up in your slack instance using the 'Add to slack' button [here/link].

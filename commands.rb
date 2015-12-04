@@ -34,7 +34,7 @@ You can also tip people with reactions to their messages. Try 1bit :1bit:, 10bit
   end
 
   def transfer data
-    $client.typing channel: channel
+    $client.typing channel: data['channel']
     command, to_user, amount, currency = data['text'].split
     currency = normalize_currency(currency)
     return {text: "Invalid syntax. Try 'help'"} unless to_user =~ /^<@.*>/
