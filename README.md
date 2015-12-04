@@ -51,13 +51,13 @@ If you already have a Coinbase account it is recommended to make a new one, sinc
 
 [Create A Coinbase Account](https://www.coinbase.com/signup)
 
-<img src="https://raw.githubusercontent.com/barmstrong/slack-tipbot/master/images/screen2.png" width="750">
+<img src="https://raw.githubusercontent.com/barmstrong/slack-tipbot/master/images/screen2.png" width="600">
 
 Verify your email and skip the quick start.
 
 [Create a Coinbase API Key](https://www.coinbase.com/settings/api) by clicking "New API Key" (you don't need OAuth2).
 
-<img src="https://raw.githubusercontent.com/barmstrong/slack-tipbot/master/images/screen2.png" width="500" style="float: right;">
+<img src="https://raw.githubusercontent.com/barmstrong/slack-tipbot/master/images/screen3.png" width="450" style="float: right;">
 
 Under accounts check the box for "All", and under permissions check the box for `wallet:accounts:create`, `wallet:accounts:read`, `wallet:addresses:create`, `wallet:transactions:transfer`, and `wallet:transactions:send`.
 
@@ -74,6 +74,8 @@ Add an app name if you'd like (optional).
 Then fill in the config variables that you generated in step 1 (SLACK_API_TOKEN) and step 2 (COINBASE_API_KEY and COINBASE_API_SECRET).
 
 Deploy your app!
+
+<img src="https://raw.githubusercontent.com/barmstrong/slack-tipbot/master/images/screen4.png" width="450">
 
 Developers: If you have the app cloned locally for development you can add the heroku repository with `git remote add heroku git@heroku.com:YOURREPONAME.git`. Or clone a fresh copy with `git clone git@heroku.com:YOURREPONAME.git`.
 
