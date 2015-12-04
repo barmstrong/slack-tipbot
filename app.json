@@ -3,7 +3,15 @@
 {
   "name": "Slack Tipbot",
   "description": "Reward teammates in slack with bitcoin!",
-  "repository": "https://github.com/heroku/node-js-sample",
-  "logo": "https://node-js-sample.herokuapp.com/node.png",
-  "keywords": ["node", "express", "static"]
+  "repository": "https://github.com/barmstrong/slack-tipbot",
+  "logo": "https://raw.githubusercontent.com/barmstrong/slack-tipbot/master/images/logo.png",
+  "keywords": ["bitcoin", "ruby", "slack"],
+  "env": {
+    "SLACK_API_TOKEN": {},
+    "COINBASE_API_KEY": {},
+    "COINBASE_API_SECRET": {}
+  },
+  "addons": [
+    "heroku-redis:hobby-dev"
+  ]
 }

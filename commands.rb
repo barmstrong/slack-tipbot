@@ -260,17 +260,4 @@ private
   def coinbase
     @coinbase ||= Coinbase::Wallet::Client.new(api_key: ENV['COINBASE_API_KEY'], api_secret: ENV['COINBASE_API_SECRET'])
   end
-
-  def slack_oauth2_client
-    @slack_client ||= OAuth2::Client.new(ENV['SLACK_CLIENT_ID'], ENV['SLACK_CLIENT_SECRET'], :site => 'https://slack.com', :authorize_url => '/oauth/authorize', :token_url => '/api/oauth.access')
-  end
-
-  def token team_domain
-    hash = JSON.parse($redis.hget('oauth_tokens', team_domain))
-    OAuth2::AccessToken.from_hash(slack_oauth2_client, hash)
-  end
-
-  def save_token team_domain, token
-    $redis.hset('oauth_tokens', team_domain, token.to_hash.to_json)
-  end
 end

@@ -45,7 +45,10 @@ Click "Save Integration". Leave this window open. You'll be needing that API tok
 
 ### 2. Deploy the app
 
-Tipbot run on the free tier of Heroku.
+Tipbot run on the free tier of Heroku. The easiest way to deploy it is with the deploy button.
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 
 
 ## Usage

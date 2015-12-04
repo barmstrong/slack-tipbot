@@ -5,6 +5,7 @@ Dir["commands/*.rb"].each {|file| require file }
 require 'web'
 require 'oauth2'
 require 'coinbase/wallet'
+require 'commands'
 require 'tipbot'
 require 'uri'
 
