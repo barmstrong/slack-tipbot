@@ -41,11 +41,11 @@ Give it a name, such as "tipbot". Then choose an emoji for it such as :money_mou
 
 Click "Save Integration". Leave this window open. You'll be needing that API token in a moment.
 
-<img src="https://photos-3.dropbox.com/t/2/AACh0iWbxBPSSK_mwH3vDxIV2EBVG6F32fQI8OnzhpW_TQ/12/324237/png/32x32/3/1449273600/0/2/Screenshot%202015-12-04%2011.12.02.png/EK6YORjDv5K0AyACKAI/oi00v4CrYuijCa_D0GunX-qat8pD78BNgNjIvFuBq1c?size_mode=3&size=1600x1200" width="500">
+<img src="https://photos-3.dropbox.com/t/2/AACh0iWbxBPSSK_mwH3vDxIV2EBVG6F32fQI8OnzhpW_TQ/12/324237/png/32x32/3/1449273600/0/2/Screenshot%202015-12-04%2011.12.02.png/EK6YORjDv5K0AyACKAI/oi00v4CrYuijCa_D0GunX-qat8pD78BNgNjIvFuBq1c?size_mode=3&size=1600x1200" width="750">
 
 ### 2. Deploy the app
 
-Tipbot run on the free tier of Heroku. The easiest way to deploy it is with the deploy button.
+Tipbot run on the free tier of Heroku. The easiest way to deploy it is with the Heroku deploy button.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 

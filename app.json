@@ -1,5 +1,3 @@
-/* Heroku file to create the deploy button */
-
 {
   "name": "Slack Tipbot",
   "description": "Reward teammates in slack with bitcoin!",
