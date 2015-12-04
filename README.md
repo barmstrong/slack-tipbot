@@ -45,7 +45,7 @@ Click "Save Integration". Leave this window open. You'll be needing that API tok
 
 ### 2. Create a Coinbase account
 
-Slack-Tipbot keeps track of each user's balance in a separate wallet on Coinbase. This allows you to make transfers between accounts off-blockchain with zero fees. You can withdraw the bitcoin to any address once you have a sizable amount (at least a couple hundred bits) with an on blockchain transaction.
+Slack-Tipbot uses Coinbase because it allows you to transfer tiny amounts between accounts off-blockchain with zero fees. Once you have a sizable amount (at least a couple hundred bits) then bitcoin can be withdrawn to any bitcoin address with an on-blockchain transaction.
 
 If you already have a Coinbase account it is recommended to make a new one, since this app will create a lot of new wallets (one per user)!
 
