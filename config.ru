@@ -15,6 +15,7 @@ Thread.new do
     STDERR.puts "ERROR: #{e}"
     STDERR.puts e.backtrace
     raise e
+    retry
   end
 end
 

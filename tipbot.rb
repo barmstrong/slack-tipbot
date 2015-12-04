@@ -2,6 +2,10 @@ class Tipbot
   include Commands
 
   def initialize
+    $client = Slack::RealTime::Client.new
+  end
+
+  def run
     $client.on :hello do
       puts "Successfully connected, welcome '#{$client.self['name']}' to the '#{$client.team['name']}' team at https://#{$client.team['domain']}.slack.com."
       populate_user_list
@@ -9,6 +13,7 @@ class Tipbot
 
     $client.on :reaction_added do |data|
       puts data
+      reaction_added(data)
     end
 
     $client.on :message do |data|
@@ -34,8 +39,6 @@ class Tipbot
       # strip the leading @tipbot data off the front if it is there
       data['text'] = data['text'].split[1..-1].join(' ') if data['text'] =~ /^<@#{tipbot_user_id}/
 
-      $client.typing channel: data['channel']
-      
       r = case data['text'].split[0]
       when 'tip'
         transfer(data)
