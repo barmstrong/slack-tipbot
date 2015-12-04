@@ -1,0 +1,15 @@
+{
+  "name": "Slack Tipbot",
+  "description": "Reward teammates in slack with bitcoin!",
+  "repository": "https://github.com/barmstrong/slack-tipbot",
+  "logo": "https://raw.githubusercontent.com/barmstrong/slack-tipbot/master/images/logo.png",
+  "keywords": ["bitcoin", "ruby", "slack"],
+  "env": {
+    "SLACK_API_TOKEN": {},
+    "COINBASE_API_KEY": {},
+    "COINBASE_API_SECRET": {}
+  },
+  "addons": [
+    "redistogo:nano"
+  ]
+}
