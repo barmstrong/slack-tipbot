@@ -1,6 +1,6 @@
 # Slack Tipbot
 
-Reward teammates in slack with bitcoin! Recognize greatness on your team with the future of money.
+Reward teammates in slack with bitcoin! Recognize greatness on your team with the future of currency.
 
 <img src="https://raw.githubusercontent.com/barmstrong/slack-tipbot/master/images/screen0.png" width="750">
 
@@ -81,11 +81,29 @@ Then fill in the config variables that you generated in step 1 (SLACK_API_TOKEN)
 
 Finally, click "Deploy for Free"!
 
-### 4. You're done!
+### 4. Test it out!
 
 The `@tipbot` user should now appear in your company Slack.
 
 Try chatting with `@tipbot` in private chat, or `/invite @tipbot` to any channel or group. Use `@tipbot help` for a list of commands or try using the `tip @user 10` syntax.
+
+### 5. Add custom emoji
+
+To get reaction tipping working, you should [add some custom emoji in Slack](https://my.slack.com/customize/emoji).
+
+We recommend the following:
+
+<img src="https://raw.githubusercontent.com/barmstrong/slack-tipbot/master/images/1bit.png" width="22" height="22"> 1bit
+
+<img src="https://raw.githubusercontent.com/barmstrong/slack-tipbot/master/images/10bits.png" width="22" height="22"> 10bits
+
+<img src="https://raw.githubusercontent.com/barmstrong/slack-tipbot/master/images/100bits.png" width="22" height="22"> 100bits
+
+<img src="https://raw.githubusercontent.com/barmstrong/slack-tipbot/master/images/1000bits.png" width="22" height="22"> 1000bits
+
+Found in the [images folder on github](https://github.com/barmstrong/slack-tipbot/tree/master/images) for easy downloading.
+
+You can use your own custom images linked to those special names as well if you prefer.
 
 ## History
 SlackTipbot was created during the Coinbase hackathon in early December 2015. If you're interested in learning more about working in the bitcoin industry [send us a note](https://www.coinbase.com/careers).
