@@ -2,7 +2,7 @@
 
 Reward teammates in slack with bitcoin! Recognize greatness on your team with the future of money.
 
-[animated gif here]
+<img src="https://raw.githubusercontent.com/barmstrong/slack-tipbot/master/images/screen0.png" width="750">
 
 ## Usage
 
@@ -67,7 +67,7 @@ Finally, it's a good idea to *fund the primary Coinbase wallet* with $5-10 of bi
 
 ### 3. Deploy the app
 
-Tipbot run on the free tier of Heroku. The easiest way to deploy it is with the Heroku deploy button.
+Tipbot runs on the free tier of Heroku. The easiest way to deploy it is with the Heroku deploy button.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
@@ -79,17 +79,13 @@ Deploy your app!
 
 <img src="https://raw.githubusercontent.com/barmstrong/slack-tipbot/master/images/screen4.png" width="450">
 
-Developers: If you have the app cloned locally for development you can add the heroku repository with `git remote add heroku git@heroku.com:YOURREPONAME.git`. Or clone a fresh copy with `git clone git@heroku.com:YOURREPONAME.git`.
+Developers: If you have the app cloned locally for development you can now add the heroku repository with `git remote add heroku git@heroku.com:YOURREPONAME.git`. Or clone a fresh copy with `git clone git@heroku.com:YOURREPONAME.git`.
 
 Troubleshooting: See what is going on with `heroku logs -t` etc.
 
-## Troubleshooting
-Set up in your slack instance using the 'Add to slack' button [here/link].
+### 4. You're done!
 
-- Send 10 bits: /tip @john 10
-- Check your balance: @tipbot balance
-- Deposit: @tipbot deposit
-- Withdraw: @tipbot withdraw
+Try chatting with `@tipbot` in private chat, or `/invite @tipbot` to any channel or group that you'd like. Use `@tipbot help` for a list of commands.
 
 ## History
 This tipping bot was created during the Coinbase hackathon in early December 2015.
