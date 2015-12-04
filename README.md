@@ -2,7 +2,7 @@
 
 Reward teammates in slack with bitcoin! Recognize greatness on your team with the future of currency.
 
-<img src="https://raw.githubusercontent.com/barmstrong/slack-tipbot/master/images/screen0.png" width="750">
+<img src="http://i.imgur.com/tayZDCq.gif" width="750">
 
 ## Usage
 
