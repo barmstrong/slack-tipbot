@@ -49,6 +49,7 @@ You can also tip people with reactions to their messages. Try 1bit :1bit:, 10bit
   def transfer_helper channel, from_user, to_user, amount, currency, message_from_user=true, message_to_user=true
     from_account = find_or_create_account(from_user)
     to_account = find_or_create_account(to_user)
+    return if from_account.nil? or to_account.nil? # occaisionally this happens if someones tries to tip a user who is no longer here
 
     amount2 = bits_to_btc(amount) if currency == 'BTC'
     tx = coinbase.account(from_account).transfer(to: to_account, amount: amount2, currency: currency)

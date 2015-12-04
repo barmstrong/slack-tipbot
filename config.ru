@@ -14,7 +14,6 @@ Thread.new do
   rescue Exception => e
     STDERR.puts "ERROR: #{e}"
     STDERR.puts e.backtrace
-    raise e
     retry
   end
 end

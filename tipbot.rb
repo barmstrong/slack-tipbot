@@ -54,6 +54,8 @@ class Tipbot
         rank(data)
       when 'hi'
         message(channel: data['channel'], text: "Hi <@#{data['user']}>!")
+      when 'fail'
+        blah # throw exception, test how gracefully it handles errors
       else
         message(channel: data['channel'], text: "Sorry <@#{data['user']}>, I didn't understand that command. Try @tipbot help.")
       end
