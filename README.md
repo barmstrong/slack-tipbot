@@ -63,6 +63,8 @@ Under accounts check the box for "All", and under permissions check the box for 
 
 Leave the rest of the settings blank and click "Create". You'll then need to "Enable" the key and click to reveal your key and secret. You'll need these in a moment.
 
+Finally, it's a good idea to *fund the primary Coinbase wallet* with $5-10 of bitcoin. By default every new user in slack (when they first interact with tipbot) will get 100 bits in their account. This greatly increases adoption/usage of tipbot since there is nothing people need to set up to start tipping.
+
 ### 3. Deploy the app
 
 Tipbot run on the free tier of Heroku. The easiest way to deploy it is with the Heroku deploy button.
