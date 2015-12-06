@@ -35,7 +35,7 @@ It takes 5-10 minutes to get a hosted copy of slack-tipbot up and running. Do yo
 
 ### 1. Create the slack bot
 
-<a href="Add a new bot in slack" target='_blank'>Add a new bot in slack</a> for your team.
+<a href="https://my.slack.com/services/new/bot" target='_blank'>Add a new bot in slack</a> for your team.
 
 Give it a name, such as "tipbot". Then choose an emoji for it such as :money_mouth_face:.
 
