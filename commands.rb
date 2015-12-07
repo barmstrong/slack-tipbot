@@ -14,7 +14,7 @@ Tipping
 
 Other Commands
 
-  @tipbot balance                              # shows your balance, 'bal' also works
+  @tipbot balance                              # shows your balance, 'bal' or 'b' also work
   @tipbot deposit                              # show a bitcoin address to add more funds
   @tipbot withdraw <amount> <address|email>    # withdraw to a bitcoin or email address
   @tipbot send <amount> <address|email>        # same as withdraw
@@ -134,7 +134,7 @@ You can also tip people with reactions to their messages. Try 1bit :1bit:, 10bit
       text << line + "\n"
       rank += 1
     end
-    message(channel: data['channel'], text: "```#{text.strip}#{"\n..." if accounts.size > 20}```")
+    message(channel: data['channel'], text: "```#{text.strip}```")
   end
 
   # sample event: {"type"=>"reaction_added", "user"=>"U03JHBPLF", "item"=>{"type"=>"message", "channel"=>"C02TVNS00", "ts"=>"1449195825.004625"}, "reaction"=>"+1", "event_ts"=>"1449195859.610258"}

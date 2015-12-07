@@ -42,7 +42,7 @@ class Tipbot
       r = case data['text'].split[0].downcase
       when 'tip'
         transfer(data)
-      when 'balance', 'bal'
+      when 'balance', 'bal', 'b'
         balance(data)
       when 'deposit'
         deposit(data)
