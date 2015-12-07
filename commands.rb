@@ -146,6 +146,7 @@ You can also tip people with reactions to their messages. Try 1bit :1bit:, 10bit
   }
   def reaction_added data
     return unless REACTIONS.keys.include?(data['reaction'])
+    return unless data['item']['type'] == 'message' # only matching reactions to messages for now, could add others in the future, would need to implement other apis below
     from_user_id = data['user']
     to_user_id = nil
 

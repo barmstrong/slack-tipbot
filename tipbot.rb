@@ -39,7 +39,7 @@ class Tipbot
       # strip the leading @tipbot data off the front if it is there
       data['text'] = data['text'].split[1..-1].join(' ') if data['text'] =~ /^<@#{tipbot_user_id}/
 
-      r = case data['text'].split[0]
+      r = case data['text'].split[0].downcase
       when 'tip'
         transfer(data)
       when 'balance', 'bal'
