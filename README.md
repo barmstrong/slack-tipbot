@@ -1,4 +1,4 @@
-# Slack Tipbot
+# Slack Bitcoin Tipbot
 
 Reward teammates in slack with bitcoin! Recognize greatness on your team with the future of currency.
 
