@@ -52,7 +52,7 @@ You can also tip people with reactions to their messages. Try 1bit :1bit:, 10bit
     return if from_account.nil? or to_account.nil? # occaisionally this happens if someones tries to tip a user who is no longer here
 
     amount2 = bits_to_btc(amount) if currency == 'BTC'
-    tx = coinbase.account(from_account).transfer(to: to_account, amount: amount2, currency: currency)
+    tx = coinbase.account(from_account).transfer(to: to_account, amount: amount2 || amount, currency: currency)
     amount3 = btc_to_bits(tx.amount.amount)
     message(channel: channel, text: "Sent #{amount3} bits to <@#{to_user}>!") if message_from_user
 
