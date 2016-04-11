@@ -118,7 +118,7 @@ You can also tip people with reactions to their messages. Try 1bit :1bit:, 10bit
 
   def rank data
     text = ""
-    accounts = coinbase.accounts
+    accounts = coinbase.accounts(fetch_all: true)
     rank = 1
     accounts.collect{|a| [a.name, a.balance.amount.to_f]}.sort_by{|a| -a[1]}.each do |a|
       if rank > 20
