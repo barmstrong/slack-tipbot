@@ -14,11 +14,11 @@ Tipping
 
 Other Commands
 
-  @tipbot balance                              # shows your balance, 'bal' or 'b' also work
+  @tipbot balance <currency>                   # shows your balance, 'bal' or 'b' also work
   @tipbot deposit                              # show a bitcoin address to add more funds
   @tipbot withdraw <amount> <address|email>    # withdraw to a bitcoin or email address
   @tipbot send <amount> <address|email>        # same as withdraw
-  @tipbot leaderboard                          # see who has what, 'rank' also works
+  @tipbot leaderboard <currency>               # see who has what, 'rank' also works
 
 In direct message chat, you can issue these commands without prefixing '@tipbot ...'.```
 \n
