@@ -7,6 +7,7 @@ gem 'sinatra'
 gem 'oauth2'
 gem 'coinbase'
 gem 'redis'
+gem 'money'
 
 group :development, :test do
   gem 'rake'

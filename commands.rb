@@ -264,7 +264,7 @@ private
 
     raise ArgumentError.new("Unknown currency: #{currency}") if ratio.nil?
 
-    (btc_amount.to_f * ratio.to_f).round(8)
+    Money.from_amount(btc_amount.to_f * ratio.to_f, currency.upcase).format
   end
 
   def account_key team_domain, user_name
