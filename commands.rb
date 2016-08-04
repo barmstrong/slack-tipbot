@@ -72,10 +72,22 @@ You can also tip people with reactions to their messages. Try 1bit :1bit:, 10bit
   end
 
   def balance data
+    command, currency = data['text'].split
+    currency ||= "bits"
+
+    currency.downcase!
+    
     account_id = find_or_create_account(data['user'])
     b = coinbase.account(account_id).balance
-    message(channel: data['channel'], text: "You've got #{btc_to_bits(b.amount)} bits <@#{data['user']}>")
+
+    amount = convert_to_currency(b.amount, currency)
+
+    currency.upcase! unless currency == "bits"
+
+    message(channel: data['channel'], text: "You've got #{amount} #{currency} <@#{data['user']}>")
   rescue Coinbase::Wallet::APIError => e
+    fail e.message, data['channel']
+  rescue ArgumentError => e
     fail e.message, data['channel']
   end
 
@@ -231,6 +243,17 @@ private
 
   def bits_to_btc bits
     bits.to_f / 1_000_000
+  end
+
+  def convert_to_currency btc_amount, currency="bits"
+    return btc_to_bits(btc_amount) if currency == "bits"
+
+    rates = coinbase.exchange_rates(currency: 'BTC')
+    ratio = rates.rates[currency.upcase]
+
+    raise ArgumentError.new("Unknown currency: #{currency}") if ratio.nil?
+
+    (btc_amount.to_f * ratio.to_f).round(8)
   end
 
   def account_key team_domain, user_name
