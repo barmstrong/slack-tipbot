@@ -129,6 +129,15 @@ You can also tip people with reactions to their messages. Try 1bit :1bit:, 10bit
   end
 
   def rank data
+    command, currency = data['text'].split
+    currency ||= "bits"
+
+    currency.downcase!
+    currency.upcase! unless currency == "bits"
+
+    #only get rates once, and only if needed (non bits)
+    rates = coinbase.exchange_rates(currency: "BTC") unless currency == "bits"
+
     text = ""
     accounts = coinbase.accounts
     rank = 1
@@ -142,11 +151,13 @@ You can also tip people with reactions to their messages. Try 1bit :1bit:, 10bit
       next if username.nil? or user_id.nil?
       next if $redis.hget('users', user_id) != username
       line = "##{rank} #{username}"
-      line += "#{btc_to_bits(a[1])} bits".rjust(45-line.size)
+      line += "#{convert_to_currency(a[1], currency, rates)} #{currency}".rjust(45-line.size)
       text << line + "\n"
       rank += 1
     end
     message(channel: data['channel'], text: "```#{text.strip}```")
+  rescue ArgumentError => e
+    fail e.message, data['channel']
   end
 
   # sample event: {"type"=>"reaction_added", "user"=>"U03JHBPLF", "item"=>{"type"=>"message", "channel"=>"C02TVNS00", "ts"=>"1449195825.004625"}, "reaction"=>"+1", "event_ts"=>"1449195859.610258"}
@@ -245,10 +256,10 @@ private
     bits.to_f / 1_000_000
   end
 
-  def convert_to_currency btc_amount, currency="bits"
+  def convert_to_currency btc_amount, currency="bits", rates=nil
     return btc_to_bits(btc_amount) if currency == "bits"
 
-    rates = coinbase.exchange_rates(currency: 'BTC')
+    rates = coinbase.exchange_rates(currency: 'BTC') if rates.nil?
     ratio = rates.rates[currency.upcase]
 
     raise ArgumentError.new("Unknown currency: #{currency}") if ratio.nil?
