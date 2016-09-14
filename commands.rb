@@ -64,8 +64,8 @@ You can also tip people with reactions to their messages. Try 1bit :1bit:, 10bit
       fail "You don't have enough balance for that <@#{from_user}>", channel
     end
     if message_to_user
-      dm_channel = direct_message_channel(to_user)
-      account_id = find_or_create_account(to_user)
+      dm_channel = direct_message_channel(from_user)
+      account_id = find_or_create_account(from_user)
       b = coinbase.account(account_id).balance
       message(channel: dm_channel, text: "You don't have enough balance to tip #{amount3} bits. Your balance is #{btc_to_bits(b.amount)} bits.")
     end
